@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #fff1f5;
+    color: #6b4555;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Верхняя часть */
+
+header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 55px;
+    color: #d982a6;
+    margin: 0;
+    animation: fadeIn 2s ease;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #9d6b80;
+}
+
+
+/* Фотографии */
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 30px 20px;
+}
+
+
+.photo {
+    background: white;
+    padding: 12px 12px 25px;
+    width: 85%;
+    max-width: 330px;
+    box-shadow: 0 10px 25px rgba(200, 120, 150, 0.2);
+    transform: rotate(-3deg);
+    transition: 0.4s;
+}
+
+
+.photo:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+
+.photo:hover {
+    transform: scale(1.05) rotate(0);
+}
+
+
+.photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* Письмо */
+
+.letter {
+    margin: 30px 20px 60px;
+    padding: 30px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(200,120,150,0.15);
+}
+
+
+.letter h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 40px;
+    color: #d982a6;
+}
+
+
+.letter p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* Подвал */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #c78aa4;
+}
+
+
+/* Сердечки */
+
+.heart {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    animation: fall linear forwards;
+    z-index: 1;
+}
+
+
+@keyframes fall {
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
